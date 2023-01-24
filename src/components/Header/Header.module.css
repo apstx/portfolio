@@ -1,0 +1,151 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@500&display=swap');
+/* font-family: 'Roboto', sans-serif; */
+@import url('https://fonts.googleapis.com/css2?family=Sofia+Sans:wght@500&display=swap');
+/* font-family: 'Sofia Sans', sans-serif; */
+
+:root {
+    
+}
+
+.header {
+    width: 100%;
+    background-color: white;
+    position: fixed;
+}
+
+.container {
+    width: 80%;
+    margin: 0 auto;
+    justify-content: space-between;
+    display: flex;
+    align-items: center;
+    height: 5rem;
+}
+
+.logo h1 {
+    font-family: 'Roboto', sans-serif;
+    font-size: 20px;
+}
+
+.ulmenu {
+    display: flex;
+    list-style: none;
+    column-gap: 2rem;
+    font-family: 'Sofia Sans', sans-serif;
+    padding: unset;
+}
+
+.link {
+    display: flex;
+    flex-direction: column;
+    text-decoration: none;
+    color: rgb(78, 78, 78);
+    transition: all 0.5s;
+    font-weight: bold;
+    align-items: center;
+}
+
+.nav_icon,
+.nav_close,
+.nav_toggle {
+    display: none;
+}
+
+.active_link,
+.link:hover {
+    color: rgb(0, 0, 0);
+}
+
+@media screen and (max-width:992px) {
+    .container {
+        padding-bottom: 1rem;
+    }
+}
+
+@media screen and (max-width:768px) {
+    .header {
+        top: initial;
+        bottom: 0;
+    }
+
+    .container {
+        height: 30%;
+    }
+
+    .logo h1 {
+        font-size: 18px;
+    }
+
+    .menubar {
+        background-color: white;
+        height: 26%;
+        bottom: -100%;
+        left: 0;
+        position: fixed;
+        width: 100%;
+        box-shadow:0 1px 3px rgb(35, 35, 35);
+        border-radius: 10px 10px 0 0;
+        transition: all 0.3s;
+    }
+
+    .show_menubar {
+        background-color: white;
+        height: 26%;
+        left: 0;
+        position: fixed;
+        width: 100%;
+        box-shadow:0 1px 3px rgb(35, 35, 35);
+        border-radius: 10px 10px 0 0;
+        transition: all 0.3s;
+        bottom: 0;
+    }
+
+    .ulmenu {
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        gap: 2rem;
+        padding-top: 1rem;
+    }
+
+    .limenu {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .link {
+        font-weight: inherit;
+        color: rgb(58, 58, 58);
+    }
+
+    .nav_icon {
+        font-size: 20px;
+    }
+
+    .nav_close {
+        position: absolute;
+        right: 1rem;
+        bottom: 1rem;
+    }
+
+    .nav_close:hover {
+
+    }
+
+    .nav_icon,
+    .nav_close,
+    .nav_toggle {
+        display: block;
+    }
+}
+
+@media screen and (max-width: 376px){
+    .menubar {
+        padding: 2rem 0.25rem 4rem;
+    }
+
+    .ulmenu {
+        column-gap: 0;
+    }
+    
+}
