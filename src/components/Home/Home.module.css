@@ -2,6 +2,7 @@
 /* font-family: 'Roboto', sans-serif; */
 @import url('https://fonts.googleapis.com/css2?family=Sofia+Sans:wght@500&display=swap');
 /* font-family: 'Sofia Sans', sans-serif; */
+
 * {
     margin: 0;
     padding: 0;
@@ -10,6 +11,7 @@
 
 .home {
     max-width: 100%;
+    background-color: whitesmoke;
 }
 
 .container {
@@ -22,7 +24,7 @@
     display: grid;
     grid-template-columns: 200px repeat(2, 1fr);
     align-items: center;
-    padding-top: 10rem;
+    padding-top: 15rem;
 }
 
 .social {
@@ -80,6 +82,39 @@
     font-weight: bold;
 }
 
+.scrolldown {
+    margin-top: 5rem;
+    justify-content: space-between;
+    cursor: pointer;
+    padding-bottom: 5rem;
+}
+
+.icon_scrolldown {
+    font-size: 30px;
+    animation: scrolling 3s infinite;
+    position: relative;
+}
+
+.text_scrolldown {
+    font-size: 30px;
+    margin-left: 10px;
+    font-family: 'Sofia Sans', sans-serif;
+}
+
+@keyframes scrolling {
+    0% {
+        top: 0;
+    }
+
+    50% {
+        top: 10px;
+    }
+
+    100% {
+        top: 0px;
+    }
+}
+
 @media screen and (max-width:992px) {
     .image_profile {
         width: 200px;
@@ -93,6 +128,10 @@
     .btn_hello {
         font-size: 20px;
         padding: 15px;
+    }
+
+    .scrolldown {
+        display: none;
     }
 }
 

@@ -2,6 +2,7 @@ import React from 'react'
 import Styles from './Home.module.css'
 import 'boxicons'
 import ReactTypingEffect from 'react-typing-effect';
+import { DownCircleOutlined } from '@ant-design/icons';
 
 function Home() {
     return (
@@ -44,6 +45,10 @@ function Home() {
                             </a>
                         </div>
                     </div>
+                </div>
+                <div className={Styles.scrolldown}>
+                    <DownCircleOutlined className={Styles.icon_scrolldown}/>
+                    <span className={Styles.text_scrolldown}>Scroll Down</span>
                 </div>
             </div>
         </div>
