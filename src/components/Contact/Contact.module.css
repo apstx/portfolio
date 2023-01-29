@@ -47,6 +47,7 @@
 
 .contact_grid_info {
     justify-self: flex-end;
+    max-width: 100%;
 }
 
 .contact_grid_info h3 {
@@ -62,7 +63,8 @@
     margin-bottom: 1rem;
     padding-top: 3rem;
     padding-bottom: 3rem;
-    width: 400px;
+    padding-left: 10rem;
+    padding-right: 10rem;
 }
 
 .contact_info_icon {
@@ -79,6 +81,7 @@
     justify-self: flex-start;
     width: 400px;
 }
+
 .contact_grid_form h3 {
     text-align: center;
     font-family: 'Roboto', sans-serif;
@@ -93,6 +96,7 @@
 
 .contact_form_input {
     justify-content: center;
+    max-width: 100%;
 }
 
 .contact_form_input_name,
@@ -139,4 +143,43 @@
     border-radius: 10px;
     padding: 1rem;
     font-size: 15px;
+}
+
+@media screen and (max-width:992px) {
+    .contact_topic h1 {
+        font-size: 25px;
+    }
+
+    .contact_grid {
+        grid-template-columns: 1fr;
+    }
+
+    .contact_grid_info,
+    .contact_grid_form {
+        justify-self: center;
+    }
+
+    .contact_grid_form {
+        justify-self: center;
+        width: 100%;
+    }
+
+    .contact_grid_input {
+        justify-self: center;
+    }
+
+}
+
+@media screen and (max-width:768px) {
+    .contact_info {
+        padding-top: 3rem;
+        padding-bottom: 3rem;
+        padding-left: 3rem;
+        padding-right: 3rem;
+    }
+
+    .contact_form_input {
+        z-index: -2;
+    }
+
 }

@@ -11,6 +11,7 @@
     width: 100%;
     background-color: whitesmoke;
     position: fixed;
+    z-index: 9999;
 }
 
 .container {

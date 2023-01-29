@@ -13,7 +13,7 @@ function About() {
                 </div>
                 <div className={Styles.about_grid}>
                     <div className={Styles.about_image_profile}>
-                        <img src="https://th.bing.com/th/id/R.96f4799e78bbc5d3c2c54fad0bab73ce?rik=bYl2hAJtayyQ1A&pid=ImgRaw&r=0"/>
+                        <img src="https://cdn.discordapp.com/attachments/1069343811819556917/1069343912428326982/132A5714-v.jpg" />
                     </div>
                     <div className={Styles.about_grid_data}>
                         <div className={Styles.about_box}>

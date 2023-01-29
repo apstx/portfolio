@@ -34,7 +34,7 @@
 }
 
 .image_profile {
-    background-image: url('https://reactjs.org/logo-og.png');
+    background-image: url('../../image/Profile.jpg');
     background-repeat: no-repeat;
     background-position: center;
     background-size: cover;

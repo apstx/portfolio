@@ -2,10 +2,12 @@ import {React, useRef, useState} from 'react'
 import Styles from './Contact.module.css'
 import {MailOutlined, FacebookOutlined, SendOutlined} from '@ant-design/icons'
 import emailjs from '@emailjs/browser';
+import {App, notification } from 'antd'
 
 function Contact() {
-
-const form = useRef();
+    const key = 'updatable';
+    const form = useRef();
+    const { message } = App.useApp();
     const [name, setName] = useState('');
     const [email, setEmail] = useState('');
     const [description, setDescription] = useState('');
@@ -23,13 +25,30 @@ const form = useRef();
         setName('');
         setEmail('');
         setDescription('');
+
+        showMessage()
     };
 
-  console.log(name,email,description)
+    const showMessage = () => {
+        message.success('Success!');
+    };
 
-  return (
+    const [api, contextHolder] = notification.useNotification();
+    const openNotification = () => {
+        setTimeout(() => {
+        api.open({
+            key,
+            message: 'New Title',
+        });
+        }, 1000);
+    };
+    
+    return (
     <div className={Styles.contact}>
         <div className={Styles.contact_container}>
+            <div style={{zIndex:9999999,position: 'static',marginTop:20}}>
+                <p>{contextHolder}</p>
+            </div>
             <div className={Styles.contact_content}>
                 <div className={Styles.contact_topic}>
                     <h1>Contact</h1>
@@ -62,10 +81,10 @@ const form = useRef();
                             </div>
                             <div className={Styles.contact_form}>
                                 <label>Description</label>
-                                <textarea name="description" onChange={(e) => setDescription(e.target.value)} value={description} className={Styles.contact_form_input_description} rows="4" cols="50" placeholder="Enter your description..."></textarea>
+                                <textarea name="description" onChange={(e) => setDescription(e.target.value)} value={description} className={Styles.contact_form_input_description}  placeholder="Enter your description..."></textarea>
                             </div>
                             <div className={Styles.contact_form_btn}>
-                                <button  className={Styles.contact_form_btn_send}>
+                                <button  className={Styles.contact_form_btn_send} onClick={openNotification}>
                                     Send Message<SendOutlined />
                                 </button>
                             </div>
