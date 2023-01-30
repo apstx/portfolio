@@ -37,14 +37,14 @@ function Header() {
                             Skill
                         </a>
                     </li>
-                    <li className={Styles.limenu}>
+                    {/* <li className={Styles.limenu}>
                         <a href="#" className={Styles.link}>
                             <div className={Styles.nav_icon}>
                                 <box-icon name='briefcase-alt-2' color='#4f4f4f'></box-icon>
                             </div>
                             Service
                         </a>
-                    </li>
+                    </li> */}
                     <li className={Styles.limenu}>
                         <a href="#" className={Styles.link}>
                             <div className={Styles.nav_icon}>
